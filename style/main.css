@@ -2,8 +2,10 @@
     margin: 0 auto;
     padding: 0;
 }
+
 body{
-   min-width: 1440px;
+   max-width: 1440px;
+   overflow: hidden;
    background-image:url(../img/bg-main-desktop.png);
    background-repeat:no-repeat;
 }
@@ -15,6 +17,13 @@ span{
 
 }
 
+input{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
 
 
 .main_container{
@@ -28,13 +37,13 @@ span{
     display: flex;
     flex-direction: column;
      justify-content: space-around;
-    height: 625px; 
+   height: 625px; 
     width: 442px;
     }
 
     .card_info_front{
         margin-right: 100rem;
-        width: 380px;
+       width: 380px;
         height: 190px;
         border-radius:3%;
         background-image: url(../img/bg-card-front.png);
@@ -56,8 +65,8 @@ span{
     }
     .logo1{
         margin-left: 1rem;
-        height: 40px;
-        width: 42px;
+       min-height: 40px;
+        min-width: 42px;
         background-color: white;
         border-radius:50% ;
     }
@@ -129,7 +138,7 @@ span{
     margin-left: 2rem;
 }
 .cvc_input{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     width: 186px;
     height: 40px;
     border-radius:2%;
@@ -143,7 +152,10 @@ span{
 
 
 .btn_add{
-    margin-top: 4rem;
+      
+    display: flex;
+    justify-content: center;
+     margin-top: 2rem;
     width: 380px;
     height: 53px;
     background-color:#1B0726;
