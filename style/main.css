@@ -117,17 +117,18 @@ button{
 
 .card_exp_area{
     display: flex;
-    justify-content: center;
 }
 
 .input_name{
     margin-top: 1rem;
     width: 24rem;
+    height: 40.5px;
 }
 
 .input_number{
     margin-top: 1rem;
     width: 24rem;
+    height: 40.5px;
 }
 
 .card_number{
