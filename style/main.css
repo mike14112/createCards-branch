@@ -120,7 +120,15 @@ button{
     justify-content: center;
 }
 
+.input_name{
+    margin-top: 1rem;
+    width: 24rem;
+}
 
+.input_number{
+    margin-top: 1rem;
+    width: 24rem;
+}
 
 .card_number{
     margin-top: 2rem;
