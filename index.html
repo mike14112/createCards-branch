@@ -32,7 +32,6 @@
         <span class="day_area">00 / 00<span class="month_place"></span></span>
       </div>
      </div>
-      
      </div>
      <div class="card_info_back">
       <div class="cvv_area">
@@ -41,10 +40,9 @@
         </div>
       </div>
      </div>
-    </div>
- 
- 
-    <div class="right_container">
+    </div> 
+   <div class="right_container">
+      <form action="#">
       <div class="card_name">
         <div class="info_card_placeholder">
           <span> Cardholder Name</span>
@@ -55,23 +53,22 @@
       <div class="card_number">
     <div class="how_this_input_number">
     <span>Card Number</span>
-
     </div>
-    <input type="text" placeholder=" e.g 1234 5678 9123 0000" class="input_number">
+    <input type="text" placeholder=" e.g 1234 5678 9123 0000" class="input_number" minlength="16" maxlength="16">
    </div>
    <div class="card_exp_area">
     <div class="card_date">
     <div class="how_this_date">
-      <span>EXP. DATE MM/YY</span>
+      <span class="month_place">EXP. DATE MM/ <span class="year_place"> YY</span></span>
     </div>
-    <input type="month" width="400px" placeholder="MM"  class="month_input">
-    <input type="year" placeholder="YY" class="year_input">
+    <input type="number" width="400px" placeholder="MM" class="month_input" max="12">
+    <input type="number" width="400px" placeholder="MM" class="year_input"  min="2030">
   </div>
     <div class="cvc_area">
       <div class="how_this_input_cvc">
         <span class="cvc">CVC</span>
       </div>
-      <input type="text" placeholder="e.g 123" class="cvc_input">
+      <input type="text" placeholder="e.g 123" class="cvc_input" maxlength="3" minlength="3">
     </div>
    </div>
 
@@ -79,6 +76,7 @@
     <button class="btn_add">Confirm</button>
    </div>
     </div>
+  </form>
   </div>
 
     <script src="app/app.js"></script>
