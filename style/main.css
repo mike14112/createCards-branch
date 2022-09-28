@@ -158,6 +158,12 @@ button{
     margin-top: 2rem;
 }
 
+.card_complete{
+    background-image: url(../img/icon-complete.svg);
+    background-repeat: no-repeat;
+    height: 40px;
+}
+
 
 
 .btn_add{

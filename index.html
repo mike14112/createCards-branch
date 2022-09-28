@@ -29,7 +29,7 @@
         <span class="person_name">dasd</span>
     </div>
       <div class="date_area">
-        <span class="day_area">00 / 00<span class="month_place"></span></span>
+        <span class="date_place">00/00</span>
       </div>
      </div>
      </div>
@@ -41,6 +41,7 @@
       </div>
      </div>
     </div> 
+
    <div class="right_container">
       <form action="#">
       <div class="card_name">
@@ -49,20 +50,18 @@
         </div>
         <input type="text" placeholder="e.g. Jane Appleseed" class="input_name">
       </div>
-   
       <div class="card_number">
     <div class="how_this_input_number">
     <span>Card Number</span>
     </div>
     <input type="text" placeholder=" e.g 1234 5678 9123 0000" class="input_number" minlength="16" maxlength="16">
    </div>
-   <div class="card_exp_area">
+   <div class="card_exp_area">    
     <div class="card_date">
     <div class="how_this_date">
-      <span class="month_place">EXP. DATE MM/ <span class="year_place"> YY</span></span>
     </div>
     <input type="number" width="400px" placeholder="MM" class="month_input" max="12">
-    <input type="number" width="400px" placeholder="MM" class="year_input"  min="2030">
+    <input type="number" width="400px" placeholder="YY" class="year_input"  min="2030">
   </div>
     <div class="cvc_area">
       <div class="how_this_input_cvc">
@@ -71,13 +70,14 @@
       <input type="text" placeholder="e.g 123" class="cvc_input" maxlength="3" minlength="3">
     </div>
    </div>
-
    <div class="confirm_btn">
     <button class="btn_add">Confirm</button>
    </div>
     </div>
   </form>
   </div>
+  </div>
+
 
     <script src="app/app.js"></script>
 </body>
