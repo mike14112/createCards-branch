@@ -147,7 +147,6 @@ button{
     margin-left: 2rem;
 }
 .cvc_input{
-    margin-top: 0.5rem;
     width: 186px;
     height: 40px;
     border-radius:2%;
@@ -182,3 +181,32 @@ button{
     outline: none;
 }
 
+.complete_container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_complete{
+    margin-bottom: 2rem;
+}
+
+.thanksgivingb{
+    margin-bottom: 2rem;
+}
+.complete_text{
+    margin-bottom: 2rem;
+}
+
+.btn_continue{
+    
+    border:none;
+    padding: 10px;
+    width:350px;
+    background-color:#1B0726;
+    color:white;
+    font-size: 22px;
+    border-radius:4%;
+
+}

@@ -7,7 +7,8 @@ let   cardName = document.querySelector('.person_name'),
       inputYear  = document.querySelector('.year_input'),
       inputMonth = document.querySelector('.month_input'),
       inputCvc = document.querySelector('.cvc_input'),
-      btnAdd  = document.querySelector('.btn_add');
+      btnAdd  = document.querySelector('.btn_add'),
+      btnComplete = document.querySelector('.btn_continue');
 
 
 
@@ -42,15 +43,18 @@ let   cardName = document.querySelector('.person_name'),
 
         if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value != '' && inputCvc.value != ''){
           cardName.innerHTML = `${inputName.value}`;
-          cardNumber.innerHTML = `${formatCardCode()}`
-          cvvPlace.innerHTML  = `${inputCvc.value}`
-
-            
+          cardNumber.innerHTML = `${formatCardCode()}`;
+          cvvPlace.innerHTML  = `${inputCvc.value}`;
         }
         if(inputMonth.value != '' && inputYear.value != '' && inputMonth.value <= 12 && inputYear.value >= 2030){
-          datePlace.innerHTML = `${inputMonth.value} / ${inputYear.value}`
-          
-    
+          datePlace.innerHTML = `${inputMonth.value} / ${inputYear.value}`;
+         
+        }
+        if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value != '' && inputCvc.value != ''){
+ 
+         document.querySelector('.right_container').style.display = 'none';
+         document.querySelector('.complete_container').style.display = 'flex';
+
         }
     });
 
@@ -59,3 +63,16 @@ let   cardName = document.querySelector('.person_name'),
 
 
   createCard()
+
+  
+  btnComplete.addEventListener('click', () => {
+    inputName.value = '';
+    inputNumber.value = '';
+    inputCvc.value ='';
+    inputMonth.value  = '';
+    inputYear.value = '';
+ 
+    document.querySelector('.right_container').style.display = 'flex';
+    document.querySelector('.complete_container').style.display = 'none';
+
+  })
