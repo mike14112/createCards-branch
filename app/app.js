@@ -10,6 +10,8 @@ let   cardName = document.querySelector('.person_name'),
       btnAdd  = document.querySelector('.btn_add'),
       btnComplete = document.querySelector('.btn_continue');
 
+      let personCard ={};
+
 
 
 
@@ -56,23 +58,43 @@ let   cardName = document.querySelector('.person_name'),
          document.querySelector('.complete_container').style.display = 'flex';
 
         }
+        personCard = {
+          name:inputName.value,
+          cardNumber:inputNumber.value,
+          expMonth:inputMonth.value,
+          expYear:inputYear.value,
+          cvc:inputCvc.value
+        };
+        
     });
+
 
   }
 
 
 
-  createCard()
+  createCard();
 
   
   btnComplete.addEventListener('click', () => {
+    
+
     inputName.value = '';
     inputNumber.value = '';
     inputCvc.value ='';
     inputMonth.value  = '';
     inputYear.value = '';
+    cardName.innerHTML = '';
+    cardNumber.innerHTML = '0000 0000 0000 ';
+    datePlace.innerHTML = '00/00';
+    cvvPlace.innerHTML = '';
+
+  
  
     document.querySelector('.right_container').style.display = 'flex';
     document.querySelector('.complete_container').style.display = 'none';
 
-  })
+
+  });
+
+  console.log(personCard);
