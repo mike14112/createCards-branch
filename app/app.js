@@ -43,28 +43,36 @@ let   cardName = document.querySelector('.person_name'),
   const createCard  = function(){
     btnAdd.addEventListener('click', () =>{
 
-        if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value != '' && inputCvc.value != ''){
+        if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value != '' && inputCvc.value != '' && inputNumber.value.length == 16 && inputCvc.value.length == 3){
           cardName.innerHTML = `${inputName.value}`;
           cardNumber.innerHTML = `${formatCardCode()}`;
           cvvPlace.innerHTML  = `${inputCvc.value}`;
+        }else{
+          alert('Incorrect Data');
+          inputName.value = ''
+          inputCvc.value = '';
+          inputNumber.value = '';
         }
         if(inputMonth.value != '' && inputYear.value != '' && inputMonth.value <= 12 && inputYear.value >= 2030){
           datePlace.innerHTML = `${inputMonth.value} / ${inputYear.value}`;
          
+        }else{
+          alert('Incorrect Data');
+       
         }
         if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value != '' && inputCvc.value != ''){
  
          document.querySelector('.right_container').style.display = 'none';
          document.querySelector('.complete_container').style.display = 'flex';
 
+        }else{
+         document.querySelector('.right_container').style.display = 'flex';
+         inputMonth.value = ''
+         inputYear.value =''
+         datePlace.innerHTML = `00/00`
+          alert('Incorrect Data')
+     
         }
-        personCard = {
-          name:inputName.value,
-          cardNumber:inputNumber.value,
-          expMonth:inputMonth.value,
-          expYear:inputYear.value,
-          cvc:inputCvc.value
-        };
         
     });
 
