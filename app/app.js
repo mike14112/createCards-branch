@@ -43,7 +43,7 @@ let   cardName = document.querySelector('.person_name'),
   const createCard  = function(){
     btnAdd.addEventListener('click', () =>{
 
-        if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value != '' && inputCvc.value != '' && inputNumber.value.length == 16 && inputCvc.value.length == 3){
+        if(inputName.value != '' && inputNumber.value != '' && inputMonth.value != '' &&  inputYear.value !=''  && inputName.value.length <= 25 && inputCvc.value != '' && inputNumber.value.length == 16 && inputCvc.value.length == 3){
           cardName.innerHTML = `${inputName.value}`;
           cardNumber.innerHTML = `${formatCardCode()}`;
           cvvPlace.innerHTML  = `${inputCvc.value}`;
